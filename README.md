@@ -1,88 +1,133 @@
-# 🔐 Keymancer
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Streamlit](https://img.shields.io/badge/built%20with-Streamlit-orange)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
+# 🔑 Keymancer – The Ultimate Password Wizard 🧙‍♂️
 
-Keymancer is a Streamlit-based password and security key generator with a user-friendly interface. It supports generating random passwords, PINs, and passphrases . The application leverages Python's `secrets` module for cryptographically secure random generation and includes batch generation and CSV export capabilities.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)  
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+
+
+**Keymancer** is a **next-gen password & passphrase generator** designed to create secure, unique, and memorable credentials.  
+It comes with both a **CLI tool** and a **modern web interface** powered by Streamlit.
+
+
+## 🌍 Website  
+
+🔗 Visit the official **Keymancer Website** here:  
+👉 [https://keymancer.streamlit.app](https://keymancer.streamlit.app)  
+
+No installation needed — everything runs directly in your browser.
+
 
 ## ✨ Features
 
-- **Multiple Generator Types**:
-  - 🔑 **Random Password**: Generate passwords with customizable length, character sets (uppercase, lowercase, digits, symbols).
-  - 🔢 **PIN**: Generate numeric PINs with adjustable length.
-  - 🧠 **Passphrase**: Generate mnemonic-based passphrases with customizable word count and separator, using the `mnemonic` library.
-
-- **Batch Generation**: Generate multiple passwords/keys in one go (up to 1000).
-- **Secure Generation**: Uses `secrets` for cryptographically secure random selection.
-- 📄 **CSV Export**: Download generated passwords with timestamps in CSV format.
-- 🙈 **Masked Display**: Option to mask passwords in the UI for added privacy.
-- **Responsive UI**: Built with Streamlit for an intuitive and interactive experience.
-
-## 🧙‍♂️ Why Keymancer?
-Keymancer isn’t just another password generator — it’s a wizard 🧙‍♂️ that gives you secure, customizable, and exportable keys with a touch of magic.
+- 🔐 Generate **random passwords** with flexible rules
+- 🔢 Create secure **numeric PINs**
+- 📖 Build **multi-language passphrases** (English, French, Japanese, and more)
+- ⚡ Batch generation (hundreds of credentials at once)
+- 📂 Export results as **CSV or JSON**
+- 📋 Copy the first result directly to your clipboard (CLI)
+- 💡 Daily **security tips** in the Web UI
+- 🛡️ Privacy-first, open-source, modular design
 
 
 ## 🚀 Installation
 
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd keymancer
-   ```
+### 1. Clone the repository
 
-2. **Install Dependencies**:
-   Ensure you have Python 3.8+ installed. Then, install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```sh
+git clone https://github.com/your-username/keymancer.git
+cd keymancer
+```
 
-   Required packages:
-   - `streamlit`
-   - `mnemonic`
+### 2. Install dependencies
 
-3. **Run the Application**:
-   ```bash
-   streamlit run keymancer.py
-   ```
+```sh
+pip install -r requirements.txt
+```
 
-## Usage
+Dependencies include: `streamlit`, `click`, `rich`, `mnemonic`, `pyperclip`
 
-1. Open the application in your browser (Streamlit will provide the URL, typically `http://localhost:8501`).
-2. Select the generator type (Random, PIN, or Passphrase) from the dropdown.
-3. Configure the options:
-   - For **Random**: Adjust length and character set preferences or provide a custom character set.
-   - For **PIN**: Set the desired length.
-   - For **Passphrase**: Choose the number of words and separator.
-4. Specify the batch size for generating multiple passwords.
-5. Click **Generate** to create passwords.
-6. View results in the UI (optionally masked) and download them as a CSV file.
 
-## 🔐 Security Notes
+## 🖥️ Usage
 
-- **Cryptographic Security**: The application uses Python's `secrets` module for secure random generation, suitable for cryptographic purposes.
-- **Sensitive Data**: ⚠️ Never share or store generated passwords in public or unsecured environments.
-- **Local Execution**: Ensure the application runs in a secure environment, as generated keys are sensitive.
+### 🔹 Web Interface (Streamlit)
 
-## 📦 File Structure
+```sh
+streamlit run keymancer_ui.py
+```
 
-- `keymancer.py`: Main application script containing the password generation logic and Streamlit UI.
-- `requirements.txt`: List of required Python packages.
+➡ Open your browser at [http://localhost:8501](http://localhost:8501)
 
-## Dependencies
+**Features in Web UI:**
 
-- Python 3.10+
-- Streamlit (`pip install streamlit`)
-- Mnemonic (`pip install mnemonic`)
+- Select between **Random Password / PIN / Passphrase**
+- Customize parameters (length, symbols, word count, etc.)
+- Batch generation & CSV download
+- Security tips sidebar
+
+
+### 🔹 Command Line Interface (CLI)
+
+```sh
+python keymancer_cli.py [COMMAND] [OPTIONS]
+```
+
+#### Available Commands:
+
+**Random Passwords**
+
+```sh
+python keymancer_cli.py random --length 20 --no-symbols --batch 3
+```
+
+**PINs**
+
+```sh
+python keymancer_cli.py pin --length 8 --batch 5 --copy
+```
+
+**Passphrases**
+
+```sh
+python keymancer_cli.py passphrase --words 5 --separator "_" --language english
+```
+
+#### Output Options:
+
+- Default → Rich colored table
+- Plain text → `--plain`
+- JSON → `--json` or `--json-file results.json`
+
+
+## 📂Project Structure
+
+```
+keymancer/
+│── keymancer_core.py    # Core password generators
+│── keymancer_cli.py     # CLI interface (Click + Rich)
+│── keymancer_ui.py      # Web app (Streamlit)
+│── keymancer_tips.py    # Security tips manager
+│── tips.json            # Security tips data
+│── requirements.txt     # Dependencies
+│── README.md            # Documentation
+```
+
+## 🧩 Contributing
+
+Want to improve **Keymancer**?
+
+- Fork the repo → Make changes → Submit a Pull Request
+- Add more password strategies to `keymancer_core.py`
+- Expand `tips.json` with valuable security advice
+
+Contributions are welcome ✨
+
 
 ## 📜 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please submit a pull request or open an issue for bug reports, feature requests, or suggestions.
 
 ## ⚠️ Disclaimer
 
-Use this tool responsibly. The authors are not liable for any misuse or security breaches resulting from improper handling of generated passwords.
+This tool is intended for **personal and educational use**.  
+The authors are **not responsible** for any misuse, security breaches, or damages caused by improper handling of generated credentials.

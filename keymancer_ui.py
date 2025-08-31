@@ -91,9 +91,8 @@ with col2:
         - Batch generation & **CSV export** for easy management  
         - Open-source & **privacy-first** design  
 
-        📂 **Resources:**  
-        - [GitHub Repository](https://github.com/your-repo)  
-        - [Documentation & Usage](https://github.com/your-repo#readme)
+        📂 **Resource:**  
+        - [GitHub Repository](https://github.com/amirhosseinmirzaei9/Keymancer)  
         """)
 
     st.markdown("---")
