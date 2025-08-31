@@ -16,8 +16,7 @@ st.set_page_config(
 
 st.markdown(
     """
-    <meta name="google-site-verification" content="gukWY3PMRhLuWiRg7Q7cuX1tRZb__Ll7bDfqnwNwCbA" />
-    """,
+    <meta name="google-site-verification" content="gukWY3PMRhLuWiRg7Q7cuX1tRZb__Ll7bDfqnwNwCbA" />    """,
     unsafe_allow_html=True
 )
 
