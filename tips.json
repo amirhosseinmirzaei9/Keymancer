@@ -1,0 +1,51 @@
+{
+  "password": [
+    "Use a unique password for every account.",
+    "Use passphrases instead of short passwords.",
+    "Avoid using common words, names, or dates in passwords.",
+    "Change your passwords regularly, at least every 6-12 months.",
+    "Use a reputable password manager to generate and store passwords.",
+    "Avoid writing passwords on paper or digital notes.",
+    "Do not reuse passwords from old accounts.",
+    "Enable password autofill only on trusted devices.",
+    "Use long passwords (12+ characters) for sensitive accounts.",
+    "Avoid using patterns like '123456' or 'password'."
+  ],
+  "2FA": [
+    "Enable two-factor authentication wherever possible.",
+    "Use authenticator apps instead of SMS for 2FA.",
+    "Regularly review and update your 2FA devices.",
+    "Do not share your 2FA codes with anyone.",
+    "Keep backup codes in a secure place."
+  ],
+  "network": [
+    "Always check for HTTPS when visiting websites.",
+    "Avoid using public Wi-Fi for sensitive transactions.",
+    "Use a VPN on untrusted networks.",
+    "Regularly update your router firmware.",
+    "Change default router passwords.",
+    "Disable unnecessary network services on devices."
+  ],
+  "phishing": [
+    "Never click on suspicious links in emails or messages.",
+    "Verify sender email addresses before opening attachments.",
+    "Do not give out personal info to unverified contacts.",
+    "Check the URL carefully before entering credentials.",
+    "Enable spam filters and report phishing emails."
+  ],
+  "device_security": [
+    "Keep your operating system and software up-to-date.",
+    "Use antivirus and anti-malware tools.",
+    "Enable device encryption on laptops and phones.",
+    "Lock your devices when not in use.",
+    "Do not install apps from untrusted sources.",
+    "Regularly backup important files."
+  ],
+  "general_security": [
+    "Educate yourself about social engineering attacks.",
+    "Regularly review your account permissions and app access.",
+    "Be cautious about what personal info you share online.",
+    "Use secure communication apps for sensitive information.",
+    "Monitor your accounts for unusual activity."
+  ]
+}
