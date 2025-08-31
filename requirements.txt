@@ -1,2 +1,5 @@
 streamlit>=1.20.0
 mnemonic
+click
+rich
+pyperclip

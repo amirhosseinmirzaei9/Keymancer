@@ -4,7 +4,7 @@ from datetime import datetime
 import csv
 import io
 from mnemonic import Mnemonic
-from kemancer_tips import get_tip
+from keymancer_tips import get_tip
 
 
 st.set_page_config(
