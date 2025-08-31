@@ -14,13 +14,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.markdown(
-    """
-    <meta name="google-site-verification" content="gukWY3PMRhLuWiRg7Q7cuX1tRZb__Ll7bDfqnwNwCbA" />    """,
-    unsafe_allow_html=True
-)
-
-
 
 st.title(":closed_lock_with_key: Keymancer")
 st.subheader("The ultimate password & security wizard 🧙‍♂️")
